@@ -107,7 +107,7 @@ with col1:
         ax1.set_ylabel('Rata-rata Peminjaman')
         st.pyplot(fig1)
         
-        st.markdown(f""" 
+        st.markdown(f"""
         Pada musim **{selected_season}** tahun 2012, grafik di atas memperlihatkan perbandingan intensitas penyewaan sepeda harian antara hari kerja dan akhir pekan/hari libur berdasarkan parameter yang dipilih.
         """)
 
@@ -131,6 +131,7 @@ with col2:
         st.pyplot(fig2)
         
         st.markdown(f"""
+        **Penjelasan:**  
         Saat kondisi cuaca **{selected_weather}**, lonjakan penyewaan oleh pengguna kasual terdistribusi pada jam-jam di atas. Informasi ini menjadi acuan waktu siaga armada bagi tim lapangan.
         """)
 
@@ -178,6 +179,6 @@ with col4:
         ax4.set_ylabel('Total Peminjaman (cnt)')
         st.pyplot(fig4)
         
-        st.markdown(""" 
+        st.markdown("""
         Peningkatan suhu harian memiliki korelasi positif terhadap volume penyewaan sepeda. Titik-titik data memperlihatkan konsentrasi penyewaan tertinggi saat temperatur berada pada rentang hangat.
         """)
