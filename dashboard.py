@@ -91,7 +91,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader(f"Rata-rata Penyewaan: Hari Kerja vs Libur")
-    st.caption(f"Fokus: Musim {selected_season} (Tahun 2012)")
+    st.caption(f"Musim {selected_season} (Tahun 2012)")
     
     # Filter data berdasarkan pilihan musim dari sidebar
     summer_2012_df = day_df[(day_df['season'] == selected_season) & (day_df['yr'] == 1)]
@@ -107,14 +107,13 @@ with col1:
         ax1.set_ylabel('Rata-rata Peminjaman')
         st.pyplot(fig1)
         
-        st.markdown(f"""
-        **Penjelasan:**  
+        st.markdown(f""" 
         Pada musim **{selected_season}** tahun 2012, grafik di atas memperlihatkan perbandingan intensitas penyewaan sepeda harian antara hari kerja dan akhir pekan/hari libur berdasarkan parameter yang dipilih.
         """)
 
 with col2:
     st.subheader("Top 5 Jam Puncak Pengguna Casual")
-    st.caption(f"Fokus: Cuaca '{selected_weather}' (Tahun 2011)")
+    st.caption(f"Cuaca '{selected_weather}' (Tahun 2011)")
     
     # Filter data berdasarkan kondisi cuaca dari sidebar
     filtered_hour_df = hour_df[(hour_df['weathersit'] == selected_weather) & (hour_df['yr'] == 0)]
@@ -132,7 +131,6 @@ with col2:
         st.pyplot(fig2)
         
         st.markdown(f"""
-        **Penjelasan:**  
         Saat kondisi cuaca **{selected_weather}**, lonjakan penyewaan oleh pengguna kasual terdistribusi pada jam-jam di atas. Informasi ini menjadi acuan waktu siaga armada bagi tim lapangan.
         """)
 
@@ -161,7 +159,6 @@ with col3:
         st.pyplot(fig3)
         
         st.markdown("""
-        **Penjelasan:**  
         Grafik menunjukkan fluktuasi pertumbuhan bulanan untuk kategori hari terpilih. Tren peminjaman secara konsisten meningkat di pertengahan tahun dan menurun di awal serta akhir tahun.
         """)
 
@@ -181,7 +178,6 @@ with col4:
         ax4.set_ylabel('Total Peminjaman (cnt)')
         st.pyplot(fig4)
         
-        st.markdown("""
-        **Penjelasan:**  
+        st.markdown(""" 
         Peningkatan suhu harian memiliki korelasi positif terhadap volume penyewaan sepeda. Titik-titik data memperlihatkan konsentrasi penyewaan tertinggi saat temperatur berada pada rentang hangat.
         """)
